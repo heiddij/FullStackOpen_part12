@@ -23,7 +23,7 @@ router.get('/statistics', async (req, res) => {
   const counter = await getAsync('added_todos')
 
   res.send({
-    "added_todos": parseInt(counter)
+    "added_todos": counter === null ? 0 : parseInt(counter)
   });
 });
 

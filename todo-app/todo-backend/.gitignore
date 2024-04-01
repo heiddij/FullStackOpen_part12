@@ -62,3 +62,4 @@ typings/
 
 # data storage
 mongo_data/
+redis_data

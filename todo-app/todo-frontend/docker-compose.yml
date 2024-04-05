@@ -1,0 +1,10 @@
+services:
+  app:
+    image: todo-frontend
+    build:
+      context: . # The context will pick this directory as the "build context"
+    volumes:
+      - ./:/usr/src/app # The path can be relative, so ./ is enough to say "the same location as the docker-compose.yml"
+    ports:
+      - 8000:80
+    container_name: hello-front # This will name the container hello-front-dev
